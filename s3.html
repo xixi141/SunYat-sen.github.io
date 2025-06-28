@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html data-wf-page="68446d03bb11284b09fdb399" data-wf-site="68446d03bb11284b09fdb2fd" data-wf-status="1" lang="en"
+  data-wf-collection="68446d03bb11284b09fdb381" data-wf-item-slug="brand-positioning-and-messaging">
+
+<head>
+  <meta charset="utf-8" />
+  <title>革命低潮中的战略一搏</title>
+  <meta content="../images/marble-202-20-1-.jpg" property="og:image" />
+  <meta content="../images/marble-202-20-1-.jpg" property="twitter:image" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Webflow" name="generator" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="./images/五角星圆角.png" type="image/x-icon">
+  <style>
+    /* 新增样式 */
+    .timeline-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background: linear-gradient(to bottom, #2c3e50, #3498db);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 3px;
+    }
+
+    .timeline-card {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+      margin-bottom: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-card.left {
+      left: 0;
+    }
+
+    .timeline-card.right {
+      left: 50%;
+    }
+
+    .timeline-card::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #e74c3c;
+      border: 4px solid #fff;
+      top: 30px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-card.left::after {
+      right: -12px;
+    }
+
+    .timeline-card.right::after {
+      left: -12px;
+    }
+
+    .timeline-content {
+      padding: 20px;
+    }
+
+    .timeline-year {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-bottom: 15px;
+    }
+
+    .timeline-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .timeline-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-description {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .gallery-section {
+      background: #f8f9fa;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .gallery-title {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .gallery-subtitle {
+      font-size: 18px;
+      color: #7f8c8d;
+      margin-bottom: 50px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      height: 350px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+
+    .gallery-item-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-item-desc {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .quote-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/marble-202-20-1-.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 100px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .quote-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .quote-text {
+      font-size: 28px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      position: relative;
+      padding: 0 40px;
+    }
+
+    .quote-text::before,
+    .quote-text::after {
+      content: "";
+      font-size: 80px;
+      position: absolute;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .quote-text::before {
+      top: -30px;
+      left: -10px;
+    }
+
+    .quote-text::after {
+      bottom: -60px;
+      right: -10px;
+      transform: rotate(180deg);
+    }
+
+    .quote-author {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-container::after {
+        left: 31px;
+      }
+
+      .timeline-card {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-card.right {
+        left: 0;
+      }
+
+      .timeline-card.left::after,
+      .timeline-card.right::after {
+        left: 18px;
+      }
+    }
+  </style>
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../images/app-icon.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+  <div class="nav_fixed">
+    <div data-animation="default" class="nav_component w-nav" data-easing2="ease" data-easing="ease"
+      data-collapse="medium" data-ix="navigatio-open-and-close" data-w-id="396176c6-906a-9f74-c6d0-8a4663dfdea9"
+      role="banner" data-duration="400">
+      <div class="nav_container"><a href="/" aria-current="page" class="nav_brand w-nav-brand w--current"><img
+            src="images/info-20graphics.jpg" loading="lazy" alt="孙中山" class="nav_logo" style="width: 700px;" /></a>
+        <nav role="navigation" class="nav_menu w-nav-menu">
+          <div class="nav_menu_container">
+            <div class="nav-menu-inner"><a href="./Revolutionary History.html" aria-current="page"
+                class="nav_menu_link w-nav-link w--current">革命历程</a><a href="./Biography.html"
+                class="nav_menu_link w-nav-link">生平</a><a href="./Thought.html"
+                class="nav_menu_link w-nav-link">思想</a><a href="./heritage.html"
+                class="nav_menu_link w-nav-link">遗产</a><a href="./commemorate.html" class="nav_menu_link w-nav-link">纪念</a></div>
+            <a href="./index.html" class="button is-nav w-button">返回</a>
+            <div class="nav-btn-wrapper"></div>
+          </div>
+        </nav>
+        <div class="nav_button w-nav-button" data-ix="navigatio-open-and-close">
+          <div class="nav_lines_icon">
+            <div class="nav_menu-lines">
+              <div class="nav_lines-one"></div>
+              <div class="nav_lines-two"></div>
+              <div class="nav_lines-three"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+        /* Make text look crisper and more legible in all browsers */
+        /*body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}*/
+
+        /* Focus state style for keyboard navigation for the focusable elements */
+        *[tabindex]:focus-visible,
+        input[type="file"]:focus-visible {
+          outline: 0.125rem solid #4d65ff;
+          outline-offset: 0.125rem;
+        }
+
+        /* Set color style to inherit */
+        .inherit-color * {
+          color: inherit;
+        }
+
+        .what_we_offer_thumbnail {
+          display: flex;
+          /* 启用Flex布局 */
+          align-items: center;
+          /* 垂直居中 */
+        }
+
+        /* Get rid of top margin on first element in any rich text element */
+        .w-richtext> :not(div):first-child,
+        .w-richtext>div:first-child> :first-child {
+          margin-top: 0 !important;
+        }
+
+        /* Get rid of bottom margin on last element in any rich text element */
+        .w-richtext>:last-child,
+        .w-richtext ol li:last-child,
+        .w-richtext ul li:last-child {
+          margin-bottom: 0 !important;
+        }
+
+
+        /* Make sure containers never lose their center alignment */
+        .container-medium,
+        .container-small,
+        .container-large {
+          margin-right: auto !important;
+          margin-left: auto !important;
+        }
+
+        /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+        /*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+        /* Apply "..." after 3 lines of text */
+        .text-style-3lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+        /* Apply "..." after 2 lines of text */
+        .text-style-2lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        /* These classes are never overwritten */
+        .hide {
+          display: none !important;
+        }
+
+        @media screen and (max-width: 991px) {
+
+          .hide,
+          .hide-tablet {
+            display: none !important;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .hide-mobile-landscape {
+            display: none !important;
+          }
+        }
+
+        @media screen and (max-width: 479px) {
+          .hide-mobile {
+            display: none !important;
+          }
+        }
+
+        .margin-0 {
+          margin: 0rem !important;
+        }
+
+        .padding-0 {
+          padding: 0rem !important;
+        }
+
+        .spacing-clean {
+          padding: 0rem !important;
+          margin: 0rem !important;
+        }
+
+        .margin-top {
+          margin-right: 0rem !important;
+          margin-bottom: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-top {
+          padding-right: 0rem !important;
+          padding-bottom: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-right {
+          margin-top: 0rem !important;
+          margin-bottom: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-right {
+          padding-top: 0rem !important;
+          padding-bottom: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-bottom {
+          margin-top: 0rem !important;
+          margin-right: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-bottom {
+          padding-top: 0rem !important;
+          padding-right: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-left {
+          margin-top: 0rem !important;
+          margin-right: 0rem !important;
+          margin-bottom: 0rem !important;
+        }
+
+        .padding-left {
+          padding-top: 0rem !important;
+          padding-right: 0rem !important;
+          padding-bottom: 0rem !important;
+        }
+
+        .margin-horizontal {
+          margin-top: 0rem !important;
+          margin-bottom: 0rem !important;
+        }
+
+        .padding-horizontal {
+          padding-top: 0rem !important;
+          padding-bottom: 0rem !important;
+        }
+
+        .margin-vertical {
+          margin-right: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-vertical {
+          padding-right: 0rem !important;
+          padding-left: 0rem !important;
+        }
+      </style>
+    </div>
+    <main class="main-wrapper overflow-hidden">
+      <section class="section_hero">
+        <div class="u-nav-spacer"></div>
+        <div class="padding-global padding-horizontal-m-0">
+          <div class="container-large">
+            <div data-w-id="381b3df6-9038-21cf-f870-b41e58e7391f"
+              style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+              class="hero_grid">
+              <div id="w-node-_381b3df6-9038-21cf-f870-b41e58e73920-09fdb399"
+                data-w-id="381b3df6-9038-21cf-f870-b41e58e73920" style="opacity:0" class="hero_content is-services">
+                <div>
+                  <div class="w-layout-vflex flex-block text-size-small"><a href="/services"
+                      class="title-small breadcrumb_default">
+                      <div class="title-small is-neon">革命低潮中的战略一搏</div>
+                    </a></div>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <h1 class="text-color-white">清末新政的欺骗性</h1>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <p class="body_one text-light">1901 年 “新政” 与 1906 年 “预备立宪” 未能挽救统治危机，反而暴露清廷维护专制的本质，革命情绪再度高涨。
+                    1910 年广州新军起义失败后，同盟会内部对革命前途产生分歧，孙中山、黄兴等决定发动一场 “破釜沉舟” 的起义以振士气。
+                  </p>
+                </div>
+              </div><img src="./images/m1.jpg" loading="lazy" alt="" class="hero_image object-position-left" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新增时间线部分 -->
+      <section class="timeline-section" style="padding: 80px 0; background: #f5f7fa;">
+        <div class="timeline-container">
+          <div class="timeline-card left">
+            <div class="timeline-content">
+              <div class="timeline-year">起义的筹备与动员</div>
+              <h3 class="timeline-title"></h3>
+              <img src="./images/m2.jpg" alt="孙中山童年" class="timeline-img">
+              <p class="timeline-description">统筹部成立：1911 年 1 月，黄兴在香港成立 “统筹部”，作为起义指挥中心，下设调度、储备、交通等课，分工明确。
+                海外筹款与物资：孙中山在北美、南洋华侨中募集资金，购买枪械弹药；同盟会会员辗转运输武器至广州。
+                敢死队组建：黄兴亲率 “选锋队”（敢死队），成员多为华侨青年、留学生及会党骨干，以 “必死之决心” 投入战斗。</p>
+            </div>
+          </div>
+
+          <div class="timeline-card right">
+            <div class="timeline-content">
+              <div class="timeline-year">作战计划与部署（1911 年 4 月 27 日，农历三月廿九）</div>
+              <h3 class="timeline-title"></h3>
+              <img src="./images/m3.jpg" alt="孙中山在檀香山" class="timeline-img">
+              <p class="timeline-description">目标：攻占广州总督署，继而控制全城，与各省响应势力会合。
+                兵力分配：
+                黄兴率敢死队 120 余人从东南门进攻总督署；
+                其余队伍分别负责进攻清军兵营、弹药库、通讯枢纽等。
+                关键细节：
+                敢死队臂缠白巾为标志，手持枪械与炸弹，由黄兴亲自带队冲锋。
+                因联络失误，部分队伍未能按时抵达，实际参战人数远少于计划。</p>
+            </div>
+          </div>
+
+          <div class="timeline-card left">
+            <div class="timeline-content">
+              <div class="timeline-year">激烈战斗与突围</div>
+              <h3 class="timeline-title"></h3>
+              <img src="./images/m4.jpg" alt="兴中会成立" class="timeline-img">
+              <p class="timeline-description">突袭总督署：
+                黄兴率队突破防线，纵火焚烧总督署后，发现总督张鸣岐已潜逃，遂转攻清军水师行营。
+                巷战与牺牲：
+                在双门底（今广州北京路）与清军遭遇，展开激烈巷战。敢死队以寡敌众，弹尽粮绝后仍徒手肉搏。
+                喻培伦：身背炸弹冲锋，炸毙清军多人，被俘后英勇就义。
+                林觉民：受伤被俘后，在狱中写下《与妻书》，痛陈 “吾充吾爱汝之心，助天下人爱其所爱”，后从容就义。
+                黄兴：右手食指中指被打断，以断指裹布继续指挥，最终在同志掩护下突围。
+                3. 失败与善后
+                起义失败后，广州革命党人潘达微冒死收殓烈士遗骸，得 72 具，合葬于广州城郊黄花岗，史称 “黄花岗七十二烈士”。
+                孙中山在海外听闻噩耗，悲痛题词：“七十二烈士之鲜血，溅成黄花岗之黄花！”</p>
+            </div>
+          </div>
+
+          <div class="timeline-card right">
+            <div class="timeline-content">
+              <div class="timeline-year">震撼全国的反清号角</div>
+              <h3 class="timeline-title"></h3>
+              <img src="./images/m5.jpg" alt="同盟会成立" class="timeline-img">
+              <p class="timeline-description">起义虽失败，但烈士们的牺牲精神通过报刊报道传遍全国。孙中山评价：“事虽不成，而黄花岗七十二烈士轰轰烈烈之概，已震动全球。”
+                鲁迅在《药》中以隐喻描写民众对烈士鲜血的麻木，从侧面反映起义的社会冲击。
+                加速革命进程的催化剂
+                起义激发了全国范围内的反清浪潮，同年 10 月 10 日武昌起义爆发，各省纷纷响应，形成 “星火燎原” 之势。
+                清廷统治根基彻底动摇，士兵与官僚对清廷的忠诚瓦解，革命成为不可逆转的潮流。
+                精神遗产与象征意义
+                黄花岗烈士陵园成为民主革命的象征，每逢纪念日，各界人士前往祭扫，缅怀先烈。
+                烈士们 “以天下为己任” 的牺牲精神，成为中华民族反抗压迫、追求自由的精神标杆。</p>
+            </div>
+          </div>
+
+          
+      </section>
+
+      <!-- 新增图片画廊部分 -->
+      <section class="gallery-section">
+        <div class="gallery-container">
+          <h2 class="gallery-title">影像</h2>
+          <p class="gallery-subtitle">通过这些珍贵的历史影像，回顾孙中山先生为振兴中华而不懈奋斗的一生</p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="./images/t1.jpg" alt="孙中山肖像" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">革命先驱</h3>
+                <p class="gallery-item-desc">孙中山先生的标准肖像照，展现其革命领袖的坚定气质</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/t10.jpg" alt="孙中山与家人" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">家庭生活</h3>
+                <p class="gallery-item-desc">孙中山与夫人宋庆龄及家人的珍贵合影</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/t3.jpg" alt="孙中山演讲" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">革命演说</h3>
+                <p class="gallery-item-desc">孙中山在群众集会上发表革命演讲</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/t4.jpg" alt="孙中山写作" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">著书立说</h3>
+                <p class="gallery-item-desc">孙中山在书房中撰写《建国方略》等著作</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/t5.jpg" alt="孙中山与革命军" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">军事部署</h3>
+                <p class="gallery-item-desc">孙中山视察革命军队，指导军事行动</p>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/t6.jpg" alt="孙中山与国际友人" class="gallery-img">
+              <div class="gallery-overlay">
+                <h3 class="gallery-item-title">国际交往</h3>
+                <p class="gallery-item-desc">孙中山与支持中国革命的外国友人合影</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新增名言部分 -->
+      <section class="quote-section">
+        <div class="quote-container">
+          <p class="quote-text">吾志所向，一往无前，愈挫愈奋，再接再厉。</p>
+          <p class="quote-author">—— 孙中山</p>
+        </div>
+      </section>
+
+      <footer data-w-id="2c84d97c-00bc-8131-9da7-85de9c21320c" class="footer_component">
+        <div data-w-id="2c84d97c-00bc-8131-9da7-85de9c21320d" class="gradient-patch hide"></div>
+        <div class="padding-global position-relative">
+          <div class="container-large">
+            <div class="footer_comp-grid">
+              <div class="footer_col is-one"><a href="/" aria-current="page"
+                  class="footer-brand w-inline-block w--current"><img src="./images/info-20graphics.jpg" loading="lazy"
+                    alt="孙中山纪念馆" /></a>
+                <p id="w-node-_2c84d97c-00bc-8131-9da7-85de9c213214-9c21320c" class="body_one">感谢您参观伟大的孙中山先生纪念馆</p>
+                <div class="social_share">
+                  <h5 class="text-color-grey footer-title">关注我们</h5>
+                  <div class="social_share-row"><a href="https://m.weibo.cn/" target="_blank"
+                      class="social_share-icon w-inline-block"><img src="images/social_icons_black.svg" loading="lazy"
+                        alt="微博" class="social_icon is-facebook" /></a></div>
+                </div>
+              </div>
+              <div class="footer_col is_two">
+                <div class="footer_links_wr is-two">
+                  <h5 class="text-color-grey footer-title">导航链接</h5>
+                  <div class="footer_col_inner is_two_inner"><a href="/" aria-current="page"
+                      class="footer_link w--current">革命历程</a><a href="#" class="footer_link">生平</a><a href="/services"
+                      class="footer_link">思想</a><a href="/blog" class="footer_link">遗产</a><a href="/contact"
+                      class="footer_link">纪念</a></div>
+                </div>
+              </div>
+              <div class="footer_col is-last">
+                <h5 class="text-color-grey">改进建议</h5>
+                <div class="padding-bottom padding-xxsmall"></div>
+                <div class="footer_col_inner">
+                  <p class="body_one text-light hide"></p>
+                  <div class="form-block w-form">
+                    <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form"
+                      method="get" data-wf-page-id="68446d03bb11284b09fdb33a"
+                      data-wf-element-id="2c84d97c-00bc-8131-9da7-85de9c213241">
+                      <div class="form_group is-subscribe"><input class="form_input is-subscribe w-input"
+                          maxlength="256" name="Subscribe-Email" data-name="Subscribe Email" placeholder="输入您的邮箱"
+                          type="email" id="Subscribe-Email" required="" /><input type="submit" data-wait="等待"
+                          class="button is-subscribe w-button" value="提交邮箱" /></div>
+                    </form>
+                    <div class="thankyou-state w-form-done">
+                      <div>谢谢您！您的提交已收到！</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>哎呀！提交表单时出错。</div>
+                    </div>
+                  </div>
+                  <div class="padding-bottom"></div>
+                </div>
+                <div class="two_columns">
+                  <div class="is-addres">
+                    <h5 class="text-color-alternate">地址</h5>
+                    <div class="padding-top padding-xxsmall"></div>
+                    <div class="body_one text-light">福建省泉州市泉州信息工程学院
+                    </div>
+                  </div>
+                  <div class="quick-contact">
+                    <div class="qc_link_wr">
+                      <h5 class="text-color-alternate">邮箱</h5>
+                      <div class="padding-top padding-xxsmall"></div><a href="mailto:info@sunyatsenmuseum.com"
+                        class="link-light-grey">contact@sunyatsenmuseum.com</a>
+                    </div>
+                    <div class="qc_link_wr">
+                      <h5 class="text-color-alternate">电话</h5>
+                      <div class="padding-top padding-xxsmall"></div><a href="tel:18005551234"
+                        class="link-light-grey">+86 8888 8888</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="w-layout-hflex copyrights">
+              <div class="body_one ligher">2025 孙中山纪念馆. 保留所有权利. </div>
+            </div>
+          </div>
+      </footer>
+    </main>
+  </div>
+  <script src="./js/jquery.js" type="text/javascript"></script>
+  <script src="./js/w3.js" type="text/javascript"></script>
+  <script src="./js/w8.js" type="text/javascript"></script>
+  <script src="./js/j-script-3.js" type="text/javascript"></script>
+  <script>
+    // 添加滚动动画效果
+    document.addEventListener('DOMContentLoaded', function () {
+      const timelineCards = document.querySelectorAll('.timeline-card');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      timelineCards.forEach(card => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+
+</html>

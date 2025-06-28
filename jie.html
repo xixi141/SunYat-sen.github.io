@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孙中山与革命先驱</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./images/五角星圆角.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #223b65; /* RGB(34,59,101) */
+            --secondary-color: #2c4a7d;
+            --accent-color: #c9a145;
+            --text-color: #f5f5f5;
+            --text-secondary: #d9d9d9;
+            --bg-color: #0f1a2f;
+            --card-width: 280px;
+            --card-height: 380px;
+            --perspective: 1500px;
+            --rotate-x: 0deg;
+            --rotate-y: 0deg;
+            --animation-duration: 1.2s;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-color);
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text-color);
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* 粒子背景效果 */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(201, 161, 69, 0.15);
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            z-index: 10;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 20px auto;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            background: rgba(34, 59, 101, 0.6);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .quote {
+            font-style: italic;
+            margin-top: 15px;
+            padding: 15px;
+            border-top: 1px dashed rgba(201, 161, 69, 0.3);
+            border-bottom: 1px dashed rgba(201, 161, 69, 0.3);
+        }
+
+        /* 卡片容器 - 网格布局 */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            perspective: var(--perspective);
+            margin-bottom: 50px;
+            z-index: 10;
+            max-width: 1200px;
+        }
+
+        /* 卡片样式 */
+        .card {
+            width: var(--card-width);
+            height: var(--card-height);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform var(--animation-duration) ease-in-out;
+            transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+            cursor: pointer;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.05);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: rotateY(0deg);
+            text-align: center;
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, #1a2f52, #2c4a7d);
+            transform: rotateY(180deg);
+            text-align: center;
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .portrait {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #223b65, #3a5d99);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .portrait i {
+            font-size: 5rem;
+            color: rgba(201, 161, 69, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .card-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .card-content {
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: left;
+            color: var(--text-secondary);
+            max-height: 230px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .card-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .card-content::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 3px;
+        }
+
+        .years {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(201, 161, 69, 0.9);
+            color: #1a2a4a;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* 控制按钮 */
+        .control-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .control-btn i {
+            font-size: 1.8rem;
+        }
+
+        /* 控制面板 */
+        .control-panel {
+            background: rgba(34, 59, 101, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            width: 350px;
+            position: fixed;
+            top: 100px;
+            right: -400px;
+            z-index: 99;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(201, 161, 69, 0.3);
+            transition: right 0.5s ease;
+        }
+
+        .control-panel.active {
+            right: 20px;
+        }
+
+        .control-panel h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            border-bottom: 1px solid rgba(201, 161, 69, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .control-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .control-group span {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .control-group input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(201, 161, 69, 0.3);
+            background: rgba(16, 28, 48, 0.7);
+            color: white;
+            accent-color: var(--accent-color);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--accent-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(201, 161, 69, 0.3);
+            min-width: 120px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1100px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --card-width: 260px;
+                --card-height: 360px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .control-panel {
+                width: 90%;
+                right: -100%;
+            }
+            
+            .control-panel.active {
+                right: 5%;
+            }
+        }
+
+        /* 3D旋转动画 */
+        @keyframes rotate3d {
+            0% {
+                transform: rotateY(0) rotateX(0);
+            }
+            25% {
+                transform: rotateY(90deg) rotateX(10deg);
+            }
+            50% {
+                transform: rotateY(180deg) rotateX(0);
+            }
+            75% {
+                transform: rotateY(270deg) rotateX(-10deg);
+            }
+            100% {
+                transform: rotateY(360deg) rotateX(0);
+            }
+        }
+
+        .auto-rotate {
+            animation: rotate3d 20s infinite linear;
+        }
+
+        /* 卡片边框光效 - 黄色渐变色走马灯 */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, 
+                #ffd700, 
+                #ffaa00, 
+                #ffd700, 
+                #ffaa00,
+                #ffd700);
+            background-size: 400%;
+            border-radius: 14px;
+            z-index: -1;
+            filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 0.7;
+            animation: glowing-border 8s linear infinite;
+        }
+
+        @keyframes glowing-border {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 400% 0;
+            }
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 15px;
+            border-top: 1px solid rgba(201, 161, 69, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- 控制按钮 -->
+    <div class="control-btn" id="controlBtn">
+        <i class="fas fa-cog"></i>
+    </div>
+    
+    <!-- 控制面板 -->
+    <div class="control-panel" id="controlPanel">
+        <h2>效果控制面板</h2>
+        <div class="controls">
+            <div class="control-group">
+                <label for="perspective">
+                    透视距离
+                    <span id="perspectiveValue">1500px</span>
+                </label>
+                <input type="range" id="perspective" min="500" max="3000" value="1500">
+            </div>
+            
+            <div class="control-group">
+                <label for="duration">
+                    动画时长
+                    <span id="durationValue">1.2s</span>
+                </label>
+                <input type="range" id="duration" min="0.5" max="3" step="0.1" value="1.2">
+            </div>
+            
+            <div class="control-group">
+                <label for="rotateX">
+                    X轴旋转
+                    <span id="rotateXValue">0°</span>
+                </label>
+                <input type="range" id="rotateX" min="-30" max="30" value="0">
+            </div>
+            
+            <div class="control-group">
+                <label for="rotateY">
+                    Y轴旋转
+                    <span id="rotateYValue">0°</span>
+                </label>
+                <input type="range" id="rotateY" min="-30" max="30" value="0">
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="flipAll">翻转所有卡片</button>
+            <button id="reset">重置效果</button>
+            <button id="autoRotate">自动旋转</button>
+        </div>
+    </div>
+    
+    <div class="header">
+        <h1>孙中山与革命先驱</h1>
+        <p>孙中山先生是中国近代民族民主主义革命的开拓者，首举彻底反帝反封建的旗帜，"起共和而终两千年封建帝制"。他领导的辛亥革命推翻了清朝统治，结束了中国两千多年的封建帝制，开创了共和新纪元。</p>
+        <p class="quote">"天下为公" —— 孙中山</p>
+    </div>
+    
+    <div class="card-container">
+        <!-- 孙中山 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r1.jpg" alt="伟大人物肖像" style="max-width: 100%; ">
+                  </div>
+                <h2 class="card-title">孙中山</h2>
+                <p class="card-subtitle">革命先行者</p>
+                <div class="years">1866-1925</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">孙中山</h2>
+                <p class="card-content">名文，字载之，号日新，又号逸仙，化名中山樵。他是中国近代民族民主主义革命的开拓者，中国民主革命伟大先行者，中华民国和中国国民党的缔造者，三民主义的倡导者。首举彻底反帝反封建的旗帜，"起共和而终两千年封建帝制"。1905年成立中国同盟会。1911年10月10日领导辛亥革命，推翻帝制建立共和。1925年3月12日在北京逝世。</p>
+            </div>
+        </div>
+        
+        <!-- 黄兴 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r2.jpg" alt="伟大人物肖像" style="max-width: 100%; ">
+                  </div>
+                <h2 class="card-title">黄兴</h2>
+                <p class="card-subtitle">革命军总司令</p>
+                <div class="years">1874-1916</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">黄兴</h2>
+                <p class="card-content">原名轸，后改名兴，字克强。近代民主革命家，中华民国的创建者之一，孙中山先生的第一知交。辛亥革命时期，以字黄克强闻名当时，与孙中山常被时人以"孙黄"并称。1916年10月31日病逝于上海。</p>
+            </div>
+        </div>
+        
+        <!-- 宋教仁 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r3.jpg" alt="伟大人物肖像" style="max-width: 100%; ">
+                  </div>
+                <h2 class="card-title">宋教仁</h2>
+                <p class="card-subtitle">民主宪政之父</p>
+                <div class="years">1882-1913</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">宋教仁</h2>
+                <p class="card-content">字钝初，号渔父。中国近代革命先驱者之一，被称作为"中国宪政之父"。1912年，中华民国成立，宋教仁被任命为法制院院长。1913年被暗杀于上海，终年31岁。</p>
+            </div>
+        </div>
+        
+        <!-- 蔡元培 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r4.jpg" alt="伟大人物肖像" style="max-width: 98%; ">
+                  </div>
+                <h2 class="card-title">蔡元培</h2>
+                <p class="card-subtitle">学界泰斗</p>
+                <div class="years">1868-1940</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">蔡元培</h2>
+                <p class="card-content">字鹤卿，又字仲申、民友、孑民。革命家、教育家、政治家。民主进步人士，国民党中央执委、国民政府委员兼监察院院长。中华民国首任教育总长。曾任北京大学校长，革新北大，开"学术"与"自由"之风。</p>
+            </div>
+        </div>
+        
+        <!-- 章炳麟 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r5.jpg" alt="伟大人物肖像" style="max-width: 100%; ">
+                  </div>
+                <h2 class="card-title">章炳麟</h2>
+                <p class="card-subtitle">革命文豪</p>
+                <div class="years">1869-1936</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">章炳麟</h2>
+                <p class="card-content">字枚叔，号太炎。清末民初民主革命家、思想家、著名学者。研究范围涉及小学、历史、哲学、政治等等，著述甚丰。早年接受西方近代机械唯物主义和生物进化论，在他的著作中阐述了西方哲学、社会学和自然科学等方面的新思想、新内容。</p>
+            </div>
+        </div>
+        
+        <!-- 秋瑾 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r6.jpg" alt="伟大人物肖像" style="max-height: 150%;  ">
+                  </div>
+                <h2 class="card-title">秋瑾</h2>
+                <p class="card-subtitle">巾帼英雄</p>
+                <div class="years">1875-1907</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">秋瑾</h2>
+                <p class="card-content">字竞雄，号鉴湖女侠。中国女权和女学思想的倡导者，近代民主革命志士。第一批为推翻满清政权和数千年封建统治而牺牲的革命先驱。1907年7月15日凌晨，秋瑾从容就义于绍兴轩亭口，年仅32岁。</p>
+            </div>
+        </div>
+        
+        <!-- 廖仲恺 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r7.jpg" alt="伟大人物肖像" style="max-width: 100%; ">
+                  </div>
+                <h2 class="card-title">廖仲恺</h2>
+                <p class="card-subtitle">革命实干家</p>
+                <div class="years">1877-1925</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">廖仲恺</h2>
+                <p class="card-content">原名恩煦，又名夷白，字仲恺。中国国民党左派领袖、中国近代著名的民主革命活动家、伟大的爱国主义者、中国民主主义革命的先驱。1925年8月20日，在广州被国民党右派刺杀。</p>
+            </div>
+        </div>
+        
+        <!-- 朱执信 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r8.jpg" alt="伟大人物肖像" style="max-height: 120%; ">
+                  </div>
+                <h2 class="card-title">朱执信</h2>
+                <p class="card-subtitle">革命理论家</p>
+                <div class="years">1885-1920</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">朱执信</h2>
+                <p class="card-content">名大符，字执信。中国近代资产阶级革命民主派的革命家、思想家。1920年9月21日，在虎门被桂系军阀杀害。著作编为《朱执信集》。</p>
+            </div>
+        </div>
+        
+        <!-- 陈其美 -->
+        <div class="card">
+            <div class="card-face card-front">
+                <div class="portrait">
+                    <img src="./images/伟大人物/r9.jpg" alt="伟大人物肖像" style="max-height: 130%; ">
+                  </div>
+                <h2 class="card-title">陈其美</h2>
+                <p class="card-subtitle">革命急先锋</p>
+                <div class="years">1878-1916</div>
+            </div>
+            <div class="card-face card-back">
+                <h2 class="card-title">陈其美</h2>
+                <p class="card-content">字英士。中国近代民主革命家、中国同盟会元老。辛亥革命初期与黄兴同为孙中山的左右股肱。蔡元培称其可与历代侠士齐名列传，并盛赞陈其美为"民国第一豪侠"。</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>纪念辛亥革命先驱 | 探索中国近代民主革命历程</p>
+    </div>
+
+    <script>
+        // 创建粒子背景
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // 随机大小
+                const size = Math.random() * 10 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // 随机位置
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // 随机动画延迟
+                particle.style.animationDelay = `${Math.random() * 15}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // 控制面板显示/隐藏
+        const controlBtn = document.getElementById('controlBtn');
+        const controlPanel = document.getElementById('controlPanel');
+        
+        controlBtn.addEventListener('click', () => {
+            controlPanel.classList.toggle('active');
+        });
+        
+        // 卡片翻转功能
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+        
+        // 控制面板功能
+        const perspectiveInput = document.getElementById('perspective');
+        const durationInput = document.getElementById('duration');
+        const rotateXInput = document.getElementById('rotateX');
+        const rotateYInput = document.getElementById('rotateY');
+        
+        const perspectiveValue = document.getElementById('perspectiveValue');
+        const durationValue = document.getElementById('durationValue');
+        const rotateXValue = document.getElementById('rotateXValue');
+        const rotateYValue = document.getElementById('rotateYValue');
+        
+        perspectiveInput.addEventListener('input', function() {
+            document.documentElement.style.setProperty('--perspective', `${this.value}px`);
+            perspectiveValue.textContent = `${this.value}px`;
+        });
+        
+        durationInput.addEventListener('input', function() {
+            document.documentElement.style.setProperty('--animation-duration', `${this.value}s`);
+            durationValue.textContent = `${this.value}s`;
+        });
+        
+        rotateXInput.addEventListener('input', function() {
+            document.documentElement.style.setProperty('--rotate-x', `${this.value}deg`);
+            rotateXValue.textContent = `${this.value}°`;
+        });
+        
+        rotateYInput.addEventListener('input', function() {
+            document.documentElement.style.setProperty('--rotate-y', `${this.value}deg`);
+            rotateYValue.textContent = `${this.value}°`;
+        });
+        
+        document.getElementById('flipAll').addEventListener('click', function() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.toggle('flipped');
+            });
+        });
+        
+        document.getElementById('reset').addEventListener('click', function() {
+            document.documentElement.style.setProperty('--perspective', '1500px');
+            document.documentElement.style.setProperty('--animation-duration', '1.2s');
+            document.documentElement.style.setProperty('--rotate-x', '0deg');
+            document.documentElement.style.setProperty('--rotate-y', '0deg');
+            
+            perspectiveInput.value = 1500;
+            durationInput.value = 1.2;
+            rotateXInput.value = 0;
+            rotateYInput.value = 0;
+            
+            perspectiveValue.textContent = '1500px';
+            durationValue.textContent = '1.2s';
+            rotateXValue.textContent = '0°';
+            rotateYValue.textContent = '0°';
+            
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('flipped', 'auto-rotate');
+            });
+        });
+        
+        document.getElementById('autoRotate').addEventListener('click', function() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.toggle('auto-rotate');
+            });
+        });
+        
+        // 初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            // 设置初始值显示
+            perspectiveValue.textContent = '1500px';
+            durationValue.textContent = '1.2s';
+            rotateXValue.textContent = '0°';
+            rotateYValue.textContent = '0°';
+        });
+    </script>
+</body>
+</html>

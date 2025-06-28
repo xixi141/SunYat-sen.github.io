@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html data-wf-page="68446d03bb11284b09fdb399" data-wf-site="68446d03bb11284b09fdb2fd" data-wf-status="1" lang="en"
+  data-wf-collection="68446d03bb11284b09fdb381" data-wf-item-slug="brand-positioning-and-messaging">
+
+<head>
+  <link rel="icon" href="./images/五角星圆角.png" type="image/x-icon">
+  <meta charset="utf-8" />
+  <title>Brand Positioning and Messaging - Webflow HTML website template</title>
+  <meta content="../images/marble-202-20-1-.jpg" property="og:image" />
+  <meta content="../images/marble-202-20-1-.jpg" property="twitter:image" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Webflow" name="generator" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../images/app-icon.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+  <div class="nav_fixed">
+    <div data-animation="default" class="nav_component w-nav" data-easing2="ease" data-easing="ease"
+      data-collapse="medium" data-ix="navigatio-open-and-close" data-w-id="396176c6-906a-9f74-c6d0-8a4663dfdea9"
+      role="banner" data-duration="400">
+      <div class="nav_container"><a href="/" aria-current="page" class="nav_brand w-nav-brand w--current"><img
+            src="images/info-20graphics.jpg" loading="lazy" alt="孙中山" class="nav_logo" style="width: 700px;" /></a>
+        <nav role="navigation" class="nav_menu w-nav-menu">
+          <div class="nav_menu_container">
+            <div class="nav-menu-inner"><a href="./Revolutionary History.html" aria-current="page"
+                class="nav_menu_link w-nav-link w--current">革命历程</a>
+              <a href="./Biography.html" class="nav_menu_link w-nav-link">生平</a>
+              <a href="./Thought.html" class="nav_menu_link w-nav-link">思想</a>
+              <a href="./heritage.html" class="nav_menu_link w-nav-link">遗产</a>
+              <a href="./commemorate.html" class="nav_menu_link w-nav-link">纪念</a>
+            </div>
+            <a href="./index.html" class="button is-nav w-button">返回</a>
+            <div class="nav-btn-wrapper"></div>
+          </div>
+        </nav>
+        <div class="nav_button w-nav-button" data-ix="navigatio-open-and-close">
+          <div class="nav_lines_icon">
+            <div class="nav_menu-lines">
+              <div class="nav_lines-one"></div>
+              <div class="nav_lines-two"></div>
+              <div class="nav_lines-three"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+        /* Make text look crisper and more legible in all browsers */
+        /*body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}*/
+
+        /* Focus state style for keyboard navigation for the focusable elements */
+        *[tabindex]:focus-visible,
+        input[type="file"]:focus-visible {
+          outline: 0.125rem solid #4d65ff;
+          outline-offset: 0.125rem;
+        }
+
+        /* Set color style to inherit */
+        .inherit-color * {
+          color: inherit;
+        }
+
+        .what_we_offer_thumbnail {
+          display: flex;
+          /* 启用Flex布局 */
+          align-items: center;
+          /* 垂直居中 */
+        }
+
+        /* Get rid of top margin on first element in any rich text element */
+        .w-richtext> :not(div):first-child,
+        .w-richtext>div:first-child> :first-child {
+          margin-top: 0 !important;
+        }
+
+        /* Get rid of bottom margin on last element in any rich text element */
+        .w-richtext>:last-child,
+        .w-richtext ol li:last-child,
+        .w-richtext ul li:last-child {
+          margin-bottom: 0 !important;
+        }
+
+
+        /* Make sure containers never lose their center alignment */
+        .container-medium,
+        .container-small,
+        .container-large {
+          margin-right: auto !important;
+          margin-left: auto !important;
+        }
+
+        /* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+        /*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+
+        /* Apply "..." after 3 lines of text */
+        .text-style-3lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+        /* Apply "..." after 2 lines of text */
+        .text-style-2lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        /* These classes are never overwritten */
+        .hide {
+          display: none !important;
+        }
+
+        @media screen and (max-width: 991px) {
+
+          .hide,
+          .hide-tablet {
+            display: none !important;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          .hide-mobile-landscape {
+            display: none !important;
+          }
+        }
+
+        @media screen and (max-width: 479px) {
+          .hide-mobile {
+            display: none !important;
+          }
+        }
+
+        .margin-0 {
+          margin: 0rem !important;
+        }
+
+        .padding-0 {
+          padding: 0rem !important;
+        }
+
+        .spacing-clean {
+          padding: 0rem !important;
+          margin: 0rem !important;
+        }
+
+        .margin-top {
+          margin-right: 0rem !important;
+          margin-bottom: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-top {
+          padding-right: 0rem !important;
+          padding-bottom: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-right {
+          margin-top: 0rem !important;
+          margin-bottom: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-right {
+          padding-top: 0rem !important;
+          padding-bottom: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-bottom {
+          margin-top: 0rem !important;
+          margin-right: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-bottom {
+          padding-top: 0rem !important;
+          padding-right: 0rem !important;
+          padding-left: 0rem !important;
+        }
+
+        .margin-left {
+          margin-top: 0rem !important;
+          margin-right: 0rem !important;
+          margin-bottom: 0rem !important;
+        }
+
+        .padding-left {
+          padding-top: 0rem !important;
+          padding-right: 0rem !important;
+          padding-bottom: 0rem !important;
+        }
+
+        .margin-horizontal {
+          margin-top: 0rem !important;
+          margin-bottom: 0rem !important;
+        }
+
+        .padding-horizontal {
+          padding-top: 0rem !important;
+          padding-bottom: 0rem !important;
+        }
+
+        .margin-vertical {
+          margin-right: 0rem !important;
+          margin-left: 0rem !important;
+        }
+
+        .padding-vertical {
+          padding-right: 0rem !important;
+          padding-left: 0rem !important;
+        }
+      </style>
+    </div>
+    <main class="main-wrapper overflow-hidden">
+      <section class="section_hero">
+        <div class="u-nav-spacer"></div>
+        <div class="padding-global padding-horizontal-m-0">
+          <div class="container-large">
+            <div data-w-id="381b3df6-9038-21cf-f870-b41e58e7391f"
+              style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+              class="hero_grid">
+              <div id="w-node-_381b3df6-9038-21cf-f870-b41e58e73920-09fdb399"
+                data-w-id="381b3df6-9038-21cf-f870-b41e58e73920" style="opacity:0" class="hero_content is-services">
+                <div>
+                  <div class="w-layout-vflex flex-block text-size-small"><a href="/services"
+                      class="title-small breadcrumb_default">
+                      <div class="title-small is-neon">从南洋少年到革命导师的时代答卷</div>
+                    </a></div>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <h1 class="text-color-white">孙中山生平：振兴中华的世纪求索</h1>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <p class="body_one text-light">以 “振兴中华” 为主线，串联孙中山从个体觉醒到领导革命、从理论建构到实践探索的一生，凸显其作为 “近代中国现代化总设计师” 的历史定位，以及
+                    “与时俱进、百折不挠” 的精神遗产。
+                  </p>
+                </div>
+              </div><img src="./images/marble-202-20-1-.jpg" loading="lazy" alt=""
+                class="hero_image object-position-left" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-w-id="f377ead3-902d-f1aa-f664-17cea8d5880b"
+        style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+        class="what_we_offer padding-section-medium">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="content_grid">
+              <div class="what_we_offer_thumbnail"><img src="./images/pexels-olly-3758104.jpg" loading="lazy" alt=""
+                  sizes="(max-width: 479px) 93vw, (max-width: 767px) 44vw, (max-width: 991px) 46vw, (max-width: 1279px) 41vw, 468px"
+                  srcset="./images/pexels-olly-3758104.jpg 500w, ./images/pexels-olly-3758104.jpg 800w, ./images/pexels-olly-3758104.jpg 1080w, ./images/pexels-olly-3758104.jpg 1600w, ./images/pexels-olly-3758104.jpg 2000w, ./images/pexels-olly-3758104.jpg 2600w, ../images/pexels-olly-3758104.jpg 3200w, ./images/pexels-olly-3758104.jpg 4460w"
+                  class="thumbnail_large" /></div>
+              <div class="what_we_offer_content">
+                <div class="title-small">觉醒之路：从 “医人” 到 “医国” 的蜕变（1866-1894）</div>
+                <div class="padding-bottom padding-xxsmall"></div>
+                <h2>思想觉醒</h2>
+                <div class="padding-bottom padding-custom1"></div>
+                <div class="what_we_offer_content">
+                  <div class="content_richtext w-richtext">
+                    <h4>南洋成长:</h4>
+                    <p> 生于广东香山贫寒农家，12 岁赴檀香山求学，西式教育（意奥兰尼学校、檀香山学院）让他目睹殖民统治下的民族苦难，萌发 “改良祖国” 的初心。</p>
+                    <h4>思想觉醒：</h4>
+                    <p>香港西医书院求学期间（1886-1892），目睹清廷腐败与列强侵略，从 “科学救国” 转向 “政治救国”，1894 年上书李鸿章提出 “人能尽其才，地能尽其利，物能尽其用，货能畅其流”
+                      的改良方案，遭拒后彻底recogn “和平改革不可复施”，同年在檀香山创立中国首个资产阶级革命团体 ——兴中会，喊出 “振兴中华” 的时代强音。</p>
+                    <h4>革命纲领：</h4>
+                    <p> 1894 年 10 月 1 日，孙中山在香港的 “第一届全国人民代表大会” 上发表了 “中国的解放宣言”，提出 “中国的解放是由一个国家的所有人民共同完成的，而不是由一个国家的一个人完成的”。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-w-id="72d7a7fa-5796-e88a-c14d-5f17f1adb5b2"
+        style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+        class="why_it_matters padding-section-large-xx">
+        <div class="padding-global">
+          <div class="container-large">
+            <div data-w-id="b6b6cd2a-4270-5aaa-06f4-d8a1fbef21c4"
+              style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+              class="content_grid is-services">
+              <div id="w-node-_94081f84-564b-ace7-2fd8-a3124b811250-09fdb399" class="content_grid_left">
+                <div class="title-small">武装反清的先声</div>
+                <div class="padding-bottom padding-xsmall"></div>
+                <h2>革命狂飙：十次起义与共和蓝图的绘制（1895-1912）</h2>
+                <div class="padding-bottom padding-medium"></div>
+                <div class="content_richtext text-right w-richtext">
+                  <p>从 1895 年广州起义到 1911 年黄花岗起义，孙中山在海外奔走筹款、组织华侨，策划十次武装起义，虽屡战屡败却愈挫愈勇，将革命火种从南洋、日本播撒至全国。</p>
+                </div>
+              </div>
+              <div id="w-node-b59e2331-7a1a-5281-33c1-96326d931d21-09fdb399" class="content_thumbnail_wr reverse"><img
+                  src="./images/1.gif" loading="lazy" alt="" class="thumbnail_416" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section data-w-id="407a4a45-1698-90cb-04d6-7c4ac431fe33"
+        style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+        class="fifty_fifty_comp padding-section-large-xx">
+        <div class="padding-global padding-m-0">
+          <div class="container-large position-relative">
+            <div class="gradient-glow-vector"></div>
+            <div data-w-id="dea3e357-6afb-ba38-66ea-e00e0728b282"
+              style="-webkit-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(null, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
+              class="fifty_fifty-grid">
+              <div class="fifty_fifty-grid-left">
+                <div>
+                  <div class="title-small is-neon">捍卫共和的孤军</div>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <h2 class="text-color-white">道路的坚守与革新：在挫折中寻找新方向（1913-1925）</h2>
+                </div>
+                <p id="w-node-dea3e357-6afb-ba38-66ea-e00e0728b28a-09fdb399" class="body_one text-lighter">
+                  袁世凯复辟帝制、张勋拥戴溥仪复辟、军阀割据混战，孙中山发起二次革命、护国运动、护法运动，虽多次失败却始终拒绝与独裁者妥协，在《讨袁檄文》中痛斥 “既忘共和，即称民贼”，成为 “民主共和” 的活旗帜。
+                </p>
+                <div class="content_richtext alternate w-richtext">
+                  <p>思想的飞跃：目睹苏俄革命胜利与中国工农运动兴起，孙中山以 “天下为公” 的胸襟改组国民党，1924 年国民党一大确立 “联俄、联共、扶助农工” 三大政策，将旧三民主义发展为新三民主义，提出
+                    “革命须依赖工农” 的论断，实现其革命生涯最具突破性的转变。
+                    <br><br>
+                    未竟的遗志：1925 年 3 月 12 日，孙中山在北京逝世，临终前仍疾呼 “革命尚未成功，同志仍须努力”，留下《建国方略》《建国大纲》等著作，为中国现代化规划了实业建设、民主宪政的宏伟蓝图。
+                  </p>
+                </div>
+              </div>
+              <div class="fifty_fifty-grid-right">
+                <div class="fifty_fifty_img_wr"><img src="./images/img-20-3-.jpg" loading="lazy" alt=""
+                    class="image_fit" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer data-w-id="2c84d97c-00bc-8131-9da7-85de9c21320c" class="footer_component">
+        <div data-w-id="2c84d97c-00bc-8131-9da7-85de9c21320d" class="gradient-patch hide"></div>
+        <div class="padding-global position-relative">
+          <div class="container-large">
+            <div class="footer_comp-grid">
+              <div class="footer_col is-one"><a href="/" aria-current="page"
+                  class="footer-brand w-inline-block w--current"><img src="./images/info-20graphics.jpg" loading="lazy"
+                    alt="Zeal Consult Template" /></a>
+                <p id="w-node-_2c84d97c-00bc-8131-9da7-85de9c213214-9c21320c" class="body_one">感谢您参观伟大的孙中山先生</p>
+                <div class="social_share">
+                  <h5 class="text-color-grey footer-title">再见！</h5>
+                  <div class="social_share-row"><a href="https://m.weibo.cn/" target="_blank"
+                      class="social_share-icon w-inline-block"><img src="images/social_icons_black.svg" loading="lazy"
+                        alt="Facebook" class="social_icon is-facebook" /></a></div>
+                </div>
+              </div>
+              <div class="footer_col is_two">
+                <div class="footer_links_wr is-two">
+                  <h5 class="text-color-grey footer-title">导航链接</h5>
+                  <div class="footer_col_inner is_two_inner"><a href="./Revolutionary History.html" aria-current="page"
+                      class="footer_link w--current">革命历程</a><a href="./Biography.html" class="footer_link">生平</a><a
+                      href="./Thought.html" class="footer_link">思想</a><a href="./heritage.html"
+                      class="footer_link">遗产</a><a href="./commemorate.html" class="footer_link">纪念</a></div>
+                </div>
+              </div>
+              <div class="footer_col is-last">
+                <h5 class="text-color-grey">改进建议</h5>
+                <div class="padding-bottom padding-xxsmall"></div>
+                <div class="footer_col_inner">
+                  <p class="body_one text-light hide"></p>
+                  <div class="form-block w-form">
+                    <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form"
+                      method="get" data-wf-page-id="68446d03bb11284b09fdb33a"
+                      data-wf-element-id="2c84d97c-00bc-8131-9da7-85de9c213241">
+                      <div class="form_group is-subscribe"><input class="form_input is-subscribe w-input"
+                          maxlength="256" name="Subscribe-Email" data-name="Subscribe Email" placeholder="输入您的邮箱"
+                          type="email" id="Subscribe-Email" required="" /><input type="submit" data-wait="等待"
+                          class="button is-subscribe w-button" value="提交邮箱" /></div>
+                    </form>
+                    <div class="thankyou-state w-form-done">
+                      <div>谢谢您！您的提交已收到！</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>哎呀！提交表单时出错。</div>
+                    </div>
+                  </div>
+                  <div class="padding-bottom"></div>
+                </div>
+                <div class="two_columns">
+                  <div class="is-addres">
+                    <h5 class="text-color-alternate">地址</h5>
+                    <div class="padding-top padding-xxsmall"></div>
+                    <div class="body_one text-light">福建省泉州市泉州信息工程学院
+                    </div>
+                  </div>
+                  <div class="quick-contact">
+                    <div class="qc_link_wr">
+                      <h5 class="text-color-alternate">Email</h5>
+                      <div class="padding-top padding-xxsmall"></div><a href="mailto:info@zealconsult.com"
+                        class="link-light-grey">222111188888.com</a>
+                    </div>
+                    <div class="qc_link_wr">
+                      <h5 class="text-color-alternate">手机号</h5>
+                      <div class="padding-top padding-xxsmall"></div><a href="tel:18005551234"
+                        class="link-light-grey">+86 888888888</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="w-layout-hflex copyrights">
+              <div class="body_one ligher">2025 孙中山纪念馆. 保留所有权利. </div>
+            </div>
+          </div>
+      </footer>
+    </main>
+  </div>
+  <script src="./js/jquery.js" type="text/javascript"></script>
+  <script src="./js/w3.js" type="text/javascript"></script>
+  <script src="./js/w8.js" type="text/javascript"></script>
+  <script src="./js/j-script-3.js" type="text/javascript"></script>
+</body>
+
+</html>
+<div class="nav-menu-inner">
+  <a href="/" aria-current="page" class="nav_menu_link w-nav-link w--current">革命历程</a>
+  <a href="/services" aria-current="page" class="nav_menu_link w-nav-link w--current">生平</a> <!-- 修改此处 -->
+  <a href="/about-us" class="nav_menu_link w-nav-link">思想</a>
+  <a href="/blog" class="nav_menu_link w-nav-link">遗产</a>
+  <a href="/contact" class="nav_menu_link w-nav-link">纪念</a>
+</div>
+</body>
+
+</html>

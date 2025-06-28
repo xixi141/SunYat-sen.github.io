@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2303010102_陈少斌_孙中山 | 天下为公 - 革命历程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="./images/五角星圆角.png" type="image/x-icon">
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            indigo: {
+              900: '#1A2C4A', // 深靛蓝 - 主色
+              800: '#233E6E', // 中靛蓝
+              700: '#2D4E86', // 浅靛蓝
+              600: '#3860A3', // 更浅靛蓝
+            },
+            bronze: {
+              500: '#B8860B', // 古铜色 - 强调色
+              400: '#CD950C', // 浅古铜色
+              300: '#E3A819', // 更浅古铜色
+            },
+            neutral: {
+              100: '#F4FAFF', // 米白色 - 文本色
+              900: '#111827', // 深灰 - 辅助色
+            }
+          },
+          fontFamily: {
+            song: ['"Noto Serif SC"', 'serif'],
+            kai: ['"KaiTi"', '"STKaiti"', 'serif'],
+            sans: ['"Noto Sans SC"', 'sans-serif']
+          },
+        },
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+            /* 文本阴影样式 */
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .text-shadow-lg {
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            /* 背景图案 */
+            .bg-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23233e6e' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+
+            /* 靛蓝渐变背景 */
+            .bg-gradient-indigo {
+                background: linear-gradient(135deg, #1A2C4A 0%, #2D4E86 100%);
+            }
+            .bg-gradient-indigo-light {
+                background: linear-gradient(135deg, #2D4E86 0%, #3860A3 100%);
+            }
+
+            /* 浮动动画（保留，可用于其他元素） */
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+                100% { transform: translateY(0px); }
+            }
+
+            /* 淡入动画 */
+            .animate-fade-in {
+                animation: fadeIn 1.5s ease-out forwards;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* 线条绘制动画（通用） */
+            .animate-stroke {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                animation: dash 3s ease-in-out forwards;
+            }
+            @keyframes dash {
+                to { stroke-dashoffset: 0; }
+            }
+
+            /* 五角星专用动画（修复缺角问题：仅保留线条绘制，移除位移/旋转） */
+            .animate-star-stroke {
+                stroke-dasharray: 2000; /* 需根据实际路径长度调整，建议通过浏览器调试获取准确值 */
+                stroke-dashoffset: 1800;
+                animation: 
+                    dash 3s ease-in-out forwards; /* 仅执行绘制动画，不添加浮动/旋转 */
+            }
+            
+            /* 自由布局图片模块样式 */
+            .dynamic-gallery-container {
+                position: relative;
+                width: 100%;
+                height: 1000px;
+                background-image: url(/images/1.png);
+                background: 
+                  /* 微妙的纹理 */
+                  linear-gradient(rgba(26, 44, 74, 0.8), rgba(35, 62, 110, 0.8)),
+                  /* 统一的靛蓝色渐变 */
+                  linear-gradient(to bottom, #1A2C4A 0%, #233E6E 100%);
+                overflow: hidden;
+            }
+            @layer utilities {
+              /* 仅针对 #dynamic-gallery 模块在 md 屏幕以上移除内边距 */
+              #dynamic-gallery .md\\:py-24 {
+                padding-top: 0rem !important;
+                padding-bottom: 0rem !important;
+              }
+            }
+            .image-module {
+                position: absolute;
+                width: 300px;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+                z-index: 1;
+                border: 2px solid rgba(205, 149, 12, 0.3); /* 添加古铜色边框 */
+            }
+
+            .image-module1 {
+              position: relative;
+              display: inline-block;
+              width: 300px;
+              height: 200px;
+              background-color: #f0f0f0;
+              text-align: center;
+              cursor: pointer;
+            }
+
+            .image-module1:hover {
+              /* 当鼠标悬停时，背景颜色变化（可以修改为任何你喜欢的效果） */
+              background-color: #e0e0e0;
+            }
+
+            .image-module2 {
+                width: 300px;
+                height: 400px;
+            }
+            
+            .image-module3 {
+                width: 400px;
+                height: 300px;
+            }.image-module4 {
+                width: 300px;
+                height: 300px;
+            }
+            .image-module5 {
+                width: 300px;
+                height: 200px;
+            }
+            .image-module6 {
+                width: 500px;
+                height: 200px;
+            }
+            .image-slider {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                position: relative;
+            }
+
+            .image-slider img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: -100%;
+                /* 初始位置在模块上方 */
+                left: 0;
+                opacity: 0;
+                transition: all 0.5s ease;
+                z-index: 0;
+            }
+
+            /* 第一张图片默认可见 */
+            .image-slider img:first-child {
+                top: 0;
+                opacity: 1;
+                z-index: 1;
+            }
+
+            .image-module:hover .image-slider img {
+                animation: dropImage 2s cubic-bezier(0.5, -0.3, 0.5, 1.3) forwards;
+            }
+
+            /* 优化动画 - 移除缩放和模糊效果 */
+            @keyframes dropImage {
+                0% {
+                    top: -100%;
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    top: 0;
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+
+            /* 自由定位（可任意调整） */
+            .image-module:nth-child(1) {
+                top: 120px;
+                left: 200px;
+            }
+
+            .image-module:nth-child(2) {
+                top: 100px;
+                left: 1300px;
+            }
+
+            .image-module:nth-child(3) {
+                top: 190px;
+                left: 700px;
+            }
+
+            .image-module:nth-child(4) {
+                top: 480px;
+                left: 150px;
+            }
+
+            .image-module:nth-child(5) {
+                top: 550px;
+                left: 600px;
+            }
+
+            .image-module:nth-child(6) {
+                top: 580px;
+                left: 60%;
+            }
+
+            /* 鼠标悬停时的效果 */
+            .image-module.hovered {
+                filter: blur(0);
+                transform: scale(1.2);
+                z-index: 2;
+                box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+                border-color: rgba(205, 149, 12, 0.8); /* 悬停时边框颜色加深 */
+            }
+
+            .image-module.blurred {
+                filter: blur(4px);
+            }
+            
+            /* 响应式调整 */
+            @media (max-width: 1200px) {
+                .dynamic-gallery-container {
+                    height: 700px;
+                }
+                .image-module:nth-child(1) { top: 100px; left: 10%; }
+                .image-module:nth-child(2) { top: 250px; left: 35%; }
+                .image-module:nth-child(3) { top: 150px; left: 60%; }
+                .image-module:nth-child(4) { top: 400px; left: 8%; }
+                .image-module:nth-child(5) { top: 500px; left: 45%; }
+                .image-module:nth-child(6) { top: 350px; left: 75%; }
+            }
+            
+            @media (max-width: 768px) {
+                .dynamic-gallery-container {
+                    height: 600px;
+                }
+                .image-module {
+                    width: 150px;
+                    height: 150px;
+                }
+                .image-module:nth-child(1) { top: 80px; left: 5%; }
+                .image-module:nth-child(2) { top: 220px; left: 30%; }
+                .image-module:nth-child(3) { top: 120px; left: 55%; }
+                .image-module:nth-child(4) { top: 350px; left: 5%; }
+                .image-module:nth-child(5) { top: 450px; left: 40%; }
+                .image-module:nth-child(6) { top: 300px; left: 70%; }
+            }
+            
+            @media (max-width: 480px) {
+                .dynamic-gallery-container {
+                    height: 500px;
+                }
+                .image-module {
+                    width: 120px;
+                    height: 120px;
+                }
+                .image-module:nth-child(1) { top: 60px; left: 5%; }
+                .image-module:nth-child(2) { top: 180px; left: 30%; }
+                .image-module:nth-child(3) { top: 100px; left: 55%; }
+                .image-module:nth-child(4) { top: 300px; left: 5%; }
+                .image-module:nth-child(5) { top: 380px; left: 40%; }
+                .image-module:nth-child(6) { top: 250px; left: 70%; }
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-pattern font-song text-neutral-100 overflow-x-hidden">
+  <!-- 页面进度条 -->
+  <div class="fixed top-0 left-0 w-full h-1.5 bg-bronze-400 z-50" id="progress-bar"></div>
+
+  <!-- 导航栏 -->
+  <nav
+    class="fixed top-0 left-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-40 transition-all duration-300"
+    id="navbar">
+    <div class="text-2xl md:text-3xl font-kai font-bold text-bronze-400 tracking-wider">
+      孙中山
+    </div>
+    <div class="hidden md:flex space-x-10">
+      <a href="./Revolutionary History.html"
+        class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300 text-lg">革命历程</a>
+      <a href="./Biography.html"
+        class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300 text-lg">生平</a>
+      <a href="./Thought.html"
+        class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300 text-lg">思想</a>
+      <a href="./heritage.html"
+        class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300 text-lg">遗产</a>
+      <a href="./commemorate.html"
+        class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300 text-lg">纪念</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-neutral-100 focus:outline-none">
+        <i class="fa fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-indigo-900/95 z-40 flex flex-col justify-center items-center space-y-8 text-2xl transform translate-x-full transition-transform duration-300">
+    <button id="menu-close" class="absolute top-6 right-6 text-neutral-100">
+      <i class="fa fa-times text-2xl"></i>
+    </button>
+    <a href="#dynamic-gallery" class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300">革命历程</a>
+    <a href="#biography" class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300">生平</a>
+    <a href="#ideas" class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300">思想</a>
+    <a href="#legacy" class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300">遗产</a>
+    <a href="#gallery" class="text-neutral-100 hover:text-bronze-300 transition-colors duration-300">纪念</a>
+  </div>
+
+  <!-- 英雄区 -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-indigo">
+    <!-- 五角星背景动画 -->
+    <div class="absolute right-0 bottom-0 w-full h-full opacity-10 pointer-events-none">
+      <svg viewBox="0 0 1000 800" class="w-full h-full">
+        <!-- 主五角星 -->
+        <path d="M500,100 L561,226 L694,226 L591,316 L625,450 L500,375 L375,450 L409,316 L306,226 L439,226 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="16" class="animate-star-stroke" />
+
+        <!-- 装饰小五角星 -->
+        <path d="M200,200 L224,274 L278,274 L236,310 L250,360 L200,330 L150,360 L164,310 L122,274 L176,274 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="1.5" class="animate-star-stroke" style="animation-delay: 0.5s" />
+
+        <path d="M800,300 L824,374 L878,374 L836,410 L850,460 L800,430 L750,460 L764,410 L722,374 L776,374 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="1.5" class="animate-star-stroke" style="animation-delay: 1s" />
+
+        <path d="M300,500 L324,574 L378,574 L336,610 L350,660 L300,630 L250,660 L264,610 L222,574 L276,574 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="1.5" class="animate-star-stroke" style="animation-delay: 1.5s" />
+
+        <path d="M700,600 L724,674 L778,674 L736,710 L750,760 L700,730 L650,760 L664,710 L622,674 L676,674 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="1.5" class="animate-star-stroke" style="animation-delay: 2s" />
+      </svg>
+    </div>
+
+    <!-- 天下为公标题 -->
+    <div class="text-center px-6 z-10">
+      <h1 class="text-[clamp(5rem,20vw,12rem)] font-kai font-bold leading-none mb-6 animate-fade-in">
+        <span class="block opacity-0 animate-fade-in" style="animation-delay: 1.8s">天</span>
+        <span class="block opacity-0 animate-fade-in" style="animation-delay: 2.3s">下</span>
+        <span class="block opacity-0 animate-fade-in" style="animation-delay: 2.5s">为</span>
+        <span class="block opacity-0 animate-fade-in" style="animation-delay: 2.7s">公</span>
+      </h1>
+      <p class="text-[clamp(1.2rem,3vw,1.8rem)] font-kai text-bronze-300 max-w-2xl mx-auto opacity-0 animate-fade-in"
+        style="animation-delay: 1.8s">
+        世界潮流，浩浩荡荡。顺之则昌，逆之则亡。
+      </p>
+    </div>
+
+    <!-- 向下滚动提示 -->
+    <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#dynamic-gallery" class="text-neutral-100/70 hover:text-bronze-300 transition-colors duration-300">
+        <i class="fa fa-angle-down text-3xl"></i>
+      </a>
+    </div>
+  </section>
+  <div class="relative bg-fixed bg-cover bg-center text-white min-h-screen"
+    style="background-image: url('/images/2.png');">
+
+    <!-- 革命历程 - 自由布局图片模块 -->
+    <section id="dynamic-gallery" class="py-16 md:py-0 relative">
+      <div class="dynamic-gallery-container">
+        <!-- 模块1 - 早期革命 -->
+        <div class="image-module image-module1 relative group" id="module1"
+          onmouseover="handleModuleHover(true, 'module1')" onmouseout="handleModuleHover(false, 'module1')">
+          <audio id="module1-audio" src="./mp3/演讲.mp3" muted preload="auto"></audio>
+          <!-- 新增标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/90 text-center text-base font-kai font-bold">
+            早期革命·兴中会的萌芽
+          </div>
+          <div class="image-slider">
+            <img src="./images/早期革命·兴中会的萌芽/1.jpg" alt="孙中山早期革命活动">
+            <img src="./images/早期革命·兴中会的萌芽/2.jpg" alt="孙中山在檀香山">
+            <img src="./images/早期革命·兴中会的萌芽/3.jpg" alt="兴中会成立">
+            <img src="./images/早期革命·兴中会的萌芽/4.jpg" alt="革命宣传">
+            <img src="./images/早期革命·兴中会的萌芽/5.jpg" alt="革命同志合影">
+          </div>
+        </div>
+
+        <!-- 模块2 - 辛亥革命 -->
+        <div class="image-module image-module2" id="module2" onmouseover="handleModuleHover(true, 'module2')"
+          onmouseout="handleModuleHover(false, 'module2')">
+          <audio id="module2-audio" src="./mp3/演讲2.mp3" muted preload="auto"></audio>
+          <!-- 统一优化后的标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/90 text-center text-base font-kai font-bold">
+            辛亥革命·推翻帝制的里程碑
+          </div>
+          <div class="image-slider">
+            <img src="./images/辛亥革命·推翻帝制的里程碑/1.jpg" alt="武昌起义">
+            <img src="./images/辛亥革命·推翻帝制的里程碑/2.jpg" alt="革命军战斗">
+            <img src="./images/辛亥革命·推翻帝制的里程碑/3.jpg" alt="各地响应革命">
+            <img src="./images/辛亥革命·推翻帝制的里程碑/4.jpg" alt="清帝退位">
+            <img src="./images/辛亥革命·推翻帝制的里程碑/5jpg.jpg" alt="民国成立">
+          </div>
+        </div>
+
+        <!-- 模块3 - 民国建立 -->
+        <div class="image-module image-module3" id="module3" onmouseover="handleModuleHover(true, 'module3')"
+          onmouseout="handleModuleHover(false, 'module3')">
+          <audio id="module3-audio" src="./mp3/演讲3.mp3" muted preload="auto"></audio>
+          <!-- 新增标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/80 text-center text-sm font-kai">
+            民国建立·共和体制的初创
+          </div>
+          <div class="image-slider">
+            <img src="./images/民国建立·共和体制的初创/1.jpg" alt="就任临时大总统">
+            <img src="./images/民国建立·共和体制的初创/2.jpg" alt="颁布临时约法">
+            <img src="./images/民国建立·共和体制的初创/3.jpg" alt="民国政府官员">
+            <img src="./images/民国建立·共和体制的初创/4.jpg" alt="政治活动">
+            <img src="./images/民国建立·共和体制的初创/5.jpg" alt="演讲">
+          </div>
+        </div>
+
+        <!-- 模块4 - 二次革命 -->
+        <div class="image-module image-module4" id="module4" onmouseover="handleModuleHover(true, 'module4')"
+          onmouseout="handleModuleHover(false, 'module4')">
+          <audio id="module4-audio" src="./mp3/演讲4.mp3" muted preload="auto"></audio>
+          <!-- 新增标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/80 text-center text-sm font-kai">
+            二次革命·捍卫共和的抗争
+          </div>
+          <div class="image-slider">
+            <img src="./images/二次革命·捍卫共和的抗争/1.jpg" alt="护国战争">
+            <img src="./images/二次革命·捍卫共和的抗争/2.jpg" alt="护法运动">
+            <img src="./images/二次革命·捍卫共和的抗争/3.jpg" alt="革命军">
+            <img src="./images/二次革命·捍卫共和的抗争/4.jpg" alt="战略会议">
+            <img src="./images/二次革命·捍卫共和的抗争/5.jpg" alt="革命基地">
+          </div>
+        </div>
+
+        <!-- 模块5 - 国共合作 -->
+        <div class="image-module image-module5" id="module5" onmouseover="handleModuleHover(true, 'module5')"
+          onmouseout="handleModuleHover(false, 'module5')">
+          <audio id="module5-audio" src="./mp3/演讲5.mp3" muted preload="auto"></audio>
+          <!-- 新增标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/80 text-center text-sm font-kai">
+            国共合作·革命力量的联合
+          </div>
+          <div class="image-slider">
+            <img src="./images/国共合作·革命力量的联合/1.jpg" alt="改组国民党">
+            <img src="./images/国共合作·革命力量的联合/2.jpg" alt="黄埔军校">
+            <img src="./images/国共合作·革命力量的联合/3.jpg" alt="与共产党代表">
+            <img src="./images/国共合作·革命力量的联合/4.jpg" alt="北伐准备">
+            <img src="./images/国共合作·革命力量的联合/5.jpg" alt="演讲三民主义">
+          </div>
+        </div>
+
+        <!-- 模块6 - 精神传承 -->
+        <div class="image-module image-module6" id="module6" onmouseover="handleModuleHover(true, 'module6')"
+          onmouseout="handleModuleHover(false, 'module6')">
+          <audio id="module6-audio" src="./mp3/演讲6.mp3" muted preload="auto"></audio>
+          <!-- 新增标题 -->
+          <div class="absolute top-0 left-0 w-full p-2 bg-indigo-900/80 text-center text-sm font-kai">
+            精神传承·中山思想的永恒
+          </div>
+          <div class="image-slider">
+            <img src="./images/精神传承·中山思想的永恒/1.jpg" alt="中山陵">
+            <img src="./images/精神传承·中山思想的永恒/2.jpg" alt="纪念活动">
+            <img src="./images/精神传承·中山思想的永恒/3.jpg" alt="著作">
+            <img src="./images/精神传承·中山思想的永恒/5.jpg" alt="思想传承">
+            <img src="./images/精神传承·中山思想的永恒/4.jpg" alt="思想传承">
+          </div>
+        </div>
+    </section>
+
+    <!-- 生平简介 -->
+    <section id="biography" class="pt-0 pb-0 md:pt-0 md:pb-32 px-6 md:px-12 bg-indigo-800">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-kai font-bold text-center mb-16 relative">
+          <span class="relative z-10">孙中山生平</span>
+          <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-bronze-400"></span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <p class="text-lg md:text-xl leading-relaxed mb-6">
+              孙中山（1866年11月12日－1925年3月12日），名文，字载之，号逸仙，广东香山人，是中国近代民族民主主义革命的开拓者，中华民国和中国国民党的缔造者，三民主义的倡导者。
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed mb-6">
+              他首举彻底反帝反封建的旗帜，"起共和而终两千年封建帝制"。1905年，在日本东京成立中国同盟会，提出"驱除鞑虏，恢复中华，创立民国，平均地权"的革命纲领。
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed">
+              1911年辛亥革命后被推举为中华民国临时大总统。1925年3月12日，孙中山因肝癌在北京逝世，留下"革命尚未成功，同志仍须努力"的遗言。
+            </p>
+          </div>
+          <div class="order-1 md:order-2 relative">
+            <div
+              class="relative z-10 rounded-lg overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+              <img src="./images/二次革命.jpeg" alt="孙中山先生肖像" class="w-full h-auto">
+              <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 text-neutral-100">
+                <p class="text-2xl font-kai">孙中山先生</p>
+                <p class="text-sm opacity-80">1866-1925</p>
+              </div>
+            </div>
+            <div class="absolute top-8 -right-4 w-64 h-64 bg-bronze-500/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-8 -left-4 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl -z-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 三民主义 -->
+  <section id="ideas" class="py-24 md:py-32 px-6 md:px-12 bg-indigo-700">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-kai font-bold text-center mb-16 relative">
+        <span class="relative z-10">三民主义</span>
+        <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-bronze-400"></span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 民族主义 -->
+        <div
+          class="bg-indigo-800/50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-indigo-600/50 transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="w-16 h-16 bg-bronze-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa fa-globe text-bronze-400 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-kai text-center mb-4">民族主义</h3>
+          <p class="text-neutral-100/80 text-center">
+            "驱除鞑虏，恢复中华"，主张中国民族自求解放，中国境内各民族一律平等，反对帝国主义侵略。
+          </p>
+        </div>
+
+        <!-- 民权主义 -->
+        <div
+          class="bg-indigo-800/50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-indigo-600/50 transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="w-16 h-16 bg-bronze-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa fa-balance-scale text-bronze-400 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-kai text-center mb-4">民权主义</h3>
+          <p class="text-neutral-100/80 text-center">
+            "创立民国"，主张建立民主立宪的政治体制，国家的权力属于人民，人民享有选举、罢免、创制、复决四权。
+          </p>
+        </div>
+
+        <!-- 民生主义 -->
+        <div
+          class="bg-indigo-800/50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-indigo-600/50 transform hover:-translate-y-2 transition-transform duration-300">
+          <div class="w-16 h-16 bg-bronze-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa fa-users text-bronze-400 text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-kai text-center mb-4">民生主义</h3>
+          <p class="text-neutral-100/80 text-center">
+            "平均地权"，主张耕者有其田，节制资本，实行"土地国有"，防止私人资本操纵国计民生。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 历史遗产 -->
+  <section id="legacy" class="py-24 md:py-32 px-6 md:px-12 bg-indigo-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-kai font-bold text-center mb-16 relative">
+        <span class="relative z-10">历史遗产</span>
+        <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-bronze-400"></span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="relative">
+          <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl">
+            <img src="./images/22.jpg" alt="孙中山与辛亥革命" class="w-full h-full object-cover">
+          </div>
+
+        </div>
+
+        <div>
+          <p class="text-lg md:text-xl leading-relaxed mb-6">
+            孙中山先生是20世纪中国伟大的革命家，他的思想和实践对中国近代历史产生了深远影响：
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-bronze-400 mt-1 mr-3"></i>
+              <span>领导辛亥革命，推翻清朝统治，结束了中国两千多年的君主专制制度</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-bronze-400 mt-1 mr-3"></i>
+              <span>建立中国历史上第一个资产阶级共和国——中华民国</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-bronze-400 mt-1 mr-3"></i>
+              <span>提出三民主义，成为中国国民党和中华民国的基本政治纲领</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-bronze-400 mt-1 mr-3"></i>
+              <span>促成第一次国共合作，推动北伐战争，为中国统一奠定基础</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-check-circle text-bronze-400 mt-1 mr-3"></i>
+              <span>被尊称为"中华民国国父"和"中国革命的先行者"</span>
+            </li>
+          </ul>
+
+          <div class="mt-8">
+            <a href="./Revolutionary History.html"
+              class="inline-flex items-center px-6 py-3 bg-bronze-500 hover:bg-bronze-400 text-neutral-100 rounded-lg transition-colors duration-300">
+              了解更多 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 纪念画廊 -->
+  <section id="gallery" class="py-24 md:py-32 px-6 md:px-12 bg-indigo-700">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-kai font-bold text-center mb-16 relative">
+        <span class="relative z-10">纪念与遗产</span>
+        <span class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-bronze-400"></span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 纪念馆 -->
+        <div class="rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/z1.jpg" alt="中山纪念馆"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-kai text-neutral-100">中山纪念馆</h3>
+                <p class="text-neutral-100/80 text-sm">中国各地及海外多有纪念馆，纪念孙中山先生的历史功绩</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 中山陵 -->
+        <div class="rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/z2.jpg" alt="南京中山陵"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-kai text-neutral-100">南京中山陵</h3>
+                <p class="text-neutral-100/80 text-sm">孙中山先生的陵墓，位于南京市玄武区紫金山南麓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 纪念日 -->
+        <div class="rounded-xl overflow-hidden shadow-lg group">
+          <div class="relative overflow-hidden">
+            <img src="./images/z3.jpg" alt="孙中山诞辰纪念"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="p-6">
+                <h3 class="text-xl font-kai text-neutral-100">孙中山纪念日</h3>
+                <p class="text-neutral-100/80 text-sm">每年11月12日为孙中山诞辰纪念日，全国举行纪念活动</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 名言 -->
+  <section class="py-24 md:py-32 px-6 md:px-12 bg-gradient-indigo-light relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <svg viewBox="0 0 100 100" class="w-full h-full">
+        <text x="50" y="50" text-anchor="middle" font-size="100" fill="white">
+          "
+        </text>
+      </svg>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-kai text-bronze-300 mb-10">
+        孙中山先生名言
+      </h2>
+
+      <div id="quotes-container" class="relative h-[10rem] md:h-[12rem]">
+        <div class="quote-item absolute inset-0 opacity-100 transition-opacity duration-1000">
+          <p class="text-[clamp(1.5rem,4vw,2.5rem)] font-kai italic mb-6 leading-relaxed">
+            "革命尚未成功，同志仍须努力。"
+          </p>
+          <p class="text-bronze-300 text-xl">—— 孙中山</p>
+        </div>
+
+        <div class="quote-item absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <p class="text-[clamp(1.5rem,4vw,2.5rem)] font-kai italic mb-6 leading-relaxed">
+            "做人最大的事情是什么呢？就是要知道怎样爱国。"
+          </p>
+          <p class="text-bronze-300 text-xl">—— 孙中山</p>
+        </div>
+
+        <div class="quote-item absolute inset-0 opacity-0 transition-opacity duration-1000">
+          <p class="text-[clamp(1.5rem,4vw,2.5rem)] font-kai italic mb-6 leading-relaxed">
+            "世界潮流，浩浩荡荡，顺之则昌，逆之则亡。"
+          </p>
+          <p class="text-bronze-300 text-xl">—— 孙中山</p>
+        </div>
+      </div>
+
+
+      <div class="flex justify-center mt-10 space-x-2">
+        <button class="w-3 h-3 rounded-full bg-bronze-300 opacity-100 quote-dot"></button>
+        <button class="w-3 h-3 rounded-full bg-bronze-300 opacity-50 quote-dot"></button>
+        <button class="w-3 h-3 rounded-full bg-bronze-300 opacity-50 quote-dot"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-indigo-900 py-12 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-kai text-bronze-400 mb-4">孙中山</h3>
+          <p class="text-neutral-100/70">
+            中国近代伟大的革命先行者，三民主义的倡导者，中华民国的缔造者。
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-kai text-bronze-400 mb-4">相关链接</h3>
+          <ul class="space-y-2">
+            <li><a href="./s1.html"
+                class="text-neutral-100/70 hover:text-bronze-300 transition-colors duration-300">广州起义</a>
+            </li>
+            <li><a href="./s2.html"
+                class="text-neutral-100/70 hover:text-bronze-300 transition-colors duration-300">民报</a>
+            </li>
+            <li><a href="./s3.html"
+                class="text-neutral-100/70 hover:text-bronze-300 transition-colors duration-300">黄花岗起义</a>
+            </li>
+            <li><a href="./s4.html"
+                class="text-neutral-100/70 hover:text-bronze-300 transition-colors duration-300">武昌起义</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-kai text-bronze-400 mb-4">联系我们</h3>
+          <p class="text-neutral-100/70 mb-2">
+            <i class="fa fa-envelope mr-2 text-bronze-400"></i> 1111
+          </p>
+          <p class="text-neutral-100/70">
+            <i class="fa fa-phone mr-2 text-bronze-400"></i> +86 11111
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-indigo-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-neutral-100/50 text-sm mb-4 md:mb-0">
+          © 2025 孙中山纪念馆. 保留所有权利.
+        </p>
+
+        <div class="flex space-x-4">
+          <a href="https://m.weibo.cn/"
+            class="text-neutral-100/50 hover:text-bronze-300 transition-colors duration-300">
+            <i class="fa fa-weibo"></i>
+          </a>
+          <a href="https://weixin.qq.com/"
+            class="text-neutral-100/50 hover:text-bronze-300 transition-colors duration-300">
+            <i class="fa fa-wechat"></i>
+          </a>
+          <a href="https://www.youtube.com/"
+            class="text-neutral-100/50 hover:text-bronze-300 transition-colors duration-300">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const progressBar = document.getElementById('progress-bar');
+
+    window.addEventListener('scroll', function () {
+      // 导航栏背景透明度
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-indigo-900/95', 'shadow-lg');
+        navbar.classList.remove('py-4');
+        navbar.classList.add('py-3');
+      } else {
+        navbar.classList.remove('bg-indigo-900/95', 'shadow-lg');
+        navbar.classList.add('py-4');
+        navbar.classList.remove('py-3');
+      }
+
+      // 页面进度条
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + '%';
+    });
+
+    // 移动端菜单
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.remove('translate-x-full');
+      document.body.style.overflow = 'hidden';
+    });
+
+    menuClose.addEventListener('click', function () {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.style.overflow = 'auto';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    // 名言轮播
+    const quoteItems = document.querySelectorAll('.quote-item');
+    const quoteDots = document.querySelectorAll('.quote-dot');
+    let currentQuote = 0;
+
+    function showQuote(index) {
+      quoteItems.forEach(item => item.classList.add('opacity-0'));
+      quoteItems.forEach(item => item.classList.remove('opacity-100'));
+      quoteDots.forEach(dot => dot.classList.add('opacity-50'));
+      quoteDots.forEach(dot => dot.classList.remove('opacity-100'));
+
+      quoteItems[index].classList.remove('opacity-0');
+      quoteItems[index].classList.add('opacity-100');
+      quoteDots[index].classList.remove('opacity-50');
+      quoteDots[index].classList.add('opacity-100');
+    }
+
+    function nextQuote() {
+      currentQuote = (currentQuote + 1) % quoteItems.length;
+      showQuote(currentQuote);
+    }
+
+    // 自动轮播
+    setInterval(nextQuote, 5000);
+
+    // 点击切换名言
+    quoteDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentQuote = index;
+        showQuote(currentQuote);
+      });
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // 自由布局图片模块脚本
+    const imageModules = document.querySelectorAll('.image-module');
+
+    // 初始化图片位置和动画延迟
+    imageModules.forEach(module => {
+      const images = module.querySelectorAll('.image-slider img');
+      const totalImages = images.length;
+
+      // 从第二张图片开始设置动画延迟（索引1）
+      images.forEach((img, index) => {
+        if (index === 0) {
+          // 第一张图片：默认显示，不触发动画
+          img.style.opacity = "1";
+          img.style.top = "0";
+          img.style.animationDelay = "2s";
+        } else {
+          // 第二张图片延迟0秒，后续图片按顺序递增延迟（此处间隔为0.5秒，可调整）
+          img.style.animationDelay = `${(index - 1) * 0.5}s`;
+
+          // 非第一张图片初始隐藏在模块上方
+          img.style.opacity = "0";
+          img.style.top = "-100%";
+        }
+      });
+    });
+
+    // 鼠标悬停处理
+    imageModules.forEach(module => {
+      module.addEventListener('mouseenter', () => {
+        module.classList.add('hovered');
+        imageModules.forEach(otherModule => {
+          if (otherModule !== module) {
+            otherModule.classList.add('blurred');
+          }
+        });
+      });
+
+      module.addEventListener('mouseleave', () => {
+        imageModules.forEach(m => {
+          m.classList.remove('hovered', 'blurred');
+          const images = m.querySelectorAll('.image-slider img');
+          images.forEach((img, index) => {
+            // 鼠标离开后重置为第一张图片显示
+            img.style.opacity = index === 0 ? "1" : "0";
+            img.style.top = index === 0 ? "0" : "-100%";
+          });
+        });
+      });
+    });
+
+    // 鼠标移动时的增强浮动效果
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+
+      imageModules.forEach(module => {
+        // 获取模块位置和尺寸
+        const rect = module.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // 计算模块到屏幕中心的距离（影响浮动幅度）
+        const distX = (window.innerWidth / 2 - centerX) / 300; // 减少分母，增加距离影响
+        const distY = (window.innerHeight / 2 - centerY) / 300;
+
+        // 基础浮动系数从15提高到30，增强效果
+        let baseMove = 30;
+
+        // 当模块被悬停时，进一步增加浮动幅度
+        if (module.classList.contains('hovered')) {
+          baseMove *= 1.5; // 悬停时再增加50%幅度
+        }
+
+        // 计算最终偏移量
+        const moveX = mouseX * -baseMove * distX;
+        const moveY = mouseY * -baseMove * distY;
+
+        // 应用变换，保留悬停时的缩放效果
+        const currentScale = module.classList.contains('hovered') ? 'scale(1.2)' : 'scale(1)';
+        module.style.transform = `${currentScale} translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+
+    // 鼠标静止时恢复原位（优化过渡效果）
+    let imageMouseTimeout;
+    document.addEventListener('mousemove', () => {
+      clearTimeout(imageMouseTimeout);
+
+      // 鼠标移动时启用更平滑的过渡
+      imageModules.forEach(module => {
+        module.style.transition = 'transform 0.2s ease-out';
+      });
+
+      // 鼠标静止时恢复原位
+      imageMouseTimeout = setTimeout(() => {
+        imageModules.forEach(module => {
+          const currentScale = module.classList.contains('hovered') ? 'scale(1.2)' : 'scale(1)';
+          module.style.transform = `${currentScale} translate(0, 0)`;
+        });
+      }, 500);
+    });
+    // 标记用户是否已交互（解决浏览器自动播放限制）
+    let userInteracted = false;
+    document.addEventListener('click', () => {
+      userInteracted = true;
+    }, { once: true });
+
+    // 音频控制函数（无弹窗）
+    function handleModuleHover(isHover, moduleId) {
+      const audio = document.getElementById(`${moduleId}-audio`);
+      if (!audio) return;
+
+      if (isHover) {
+        // 仅在用户已交互后允许播放
+        if (!userInteracted) {
+          console.log(`请先点击页面任意位置解锁音频播放（模块${moduleId}）`);
+          return;
+        }
+        audio.muted = false;
+        audio.play().catch(err => {
+          console.error(`模块${moduleId}音频播放失败（文件路径或浏览器限制）:`, err);
+        });
+      } else {
+        audio.pause();
+        audio.muted = true; // 恢复静音避免下次悬停重复触发限制
+      }
+    }
+
+  </script>
+</body>
+
+</html>
